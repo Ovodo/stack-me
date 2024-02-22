@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { getServerSession } from "next-auth";
-import { authOptions, getServerAuthSession } from "@/server/auth";
+import { getServerAuthSession } from "@/server/auth";
 import Dashboard from "@/components/Dashboard";
 import useFonts from "@/hooks/useFonts";
 
@@ -17,7 +16,6 @@ export default async function RootLayout(props: {
 }) {
   const session = await getServerAuthSession();
   const { Jim, poppins } = useFonts();
-  console.log("ovd", session);
 
   if (!session) {
     return (

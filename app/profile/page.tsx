@@ -1,27 +1,14 @@
 // "use client";
 
-import Copy from "@/components/utils/Copy";
 import { getServerAuthSession } from "@/server/auth";
 import { Session, User } from "next-auth";
-import Image from "next/image";
-import Key from "@/public/key.svg";
-import AddButton from "@/components/button/AddButton";
-import InitModal from "@/components/modals/InitModal";
-
-import { newUser } from "@/lib/actions";
 import { baseUrl } from "@/config";
-import { PrivateKey } from "@/lib/types";
-import Link from "next/link";
-import SellModal from "@/components/modals/SellModal";
-import BuyButton from "@/components/button/BuyButton";
-import WithdrawModals from "@/components/modals/WithdrawModals";
-import InputLine from "@/components/input/InputLine";
 import Bio from "@/components/Bio";
 import axios from "axios";
 
 const getUser = async (email: string) => {
   try {
-    const res = await axios.post("http://localhost:3000/api/get/user", {
+    const res = await axios.post(`${baseUrl}/api/get/user`, {
       email,
     });
     console.log("sucess", res.data);
