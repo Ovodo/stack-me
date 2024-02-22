@@ -34,7 +34,7 @@ const Page = async () => {
   downloadImage(session?.user?.picture, `${session?.user?.email}.jpg`);
 
   return (
-    <main className='flex max-h-screen bg-gradient-to-r from-gray-800 to-gray-200 overflow-scroll scrollbar-hide relative  flex-col items-center justify-start px-10 py-5'>
+    <main className='flex max-h-screen bg-gradient-to-r from-gray-400 to-gray-200 overflow-scroll scrollbar-hide relative  flex-col items-center justify-start px-10 py-5'>
       <section
         id='TOP'
         className='w-full mb-10 border-b mt-10 pb-1 flex border-appBlue justify-around'
