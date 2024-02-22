@@ -16,7 +16,7 @@ const postUser = async (data: User) => {
 };
 const allUsers = async () => {
   try {
-    const res = await axios.get(`${baseUrl}/api//users`);
+    const res = await axios.get(`${baseUrl}/api/users`);
     console.log("allUsers", res.data);
     return res.data;
   } catch (error: any) {
