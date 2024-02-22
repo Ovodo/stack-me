@@ -1,11 +1,4 @@
-import { AptosAccount } from "aptos";
 import { Account, NextAuthOptions, Profile, Session, User, getServerSession } from "next-auth";
-import { MongoDBAdapter } from "@next-auth/mongodb-adapter";
-import clientPromise from "@/lib/mongodb";
-
-import TwitterProvider, { TwitterProfile } from "next-auth/providers/twitter";
-import { initializeAccount } from "@/lib/contract";
-import { encrypt } from "@/lib/security";
 import { JWT } from "next-auth/jwt";
 const provider:any = {
   id: "affinidi",
@@ -119,12 +112,7 @@ export const authOptions: NextAuthOptions = {
 }
 
   },
-  // events: {
-  //   async signIn({ user, account }) {
-  //     const aptosAccount = new AptosAccount(undefined, user.address);
-  //     await initializeAccount(aptosAccount);
-  //   },
-  // },
+
 };
 
 /**
