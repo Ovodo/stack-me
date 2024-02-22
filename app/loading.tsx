@@ -9,7 +9,7 @@ const Loading = () => {
   const { Jim } = useFonts();
 
   return (
-    <main className='flex min-h-screen overflow-hidden relative bg-gradient-to-b from-gray-800 to-gray-200 flex-col items-center justify-center p-24'>
+    <main className='flex min-h-screen overflow-hidden relative  bg-gradient-to-b from-gray-800 to-gray-200 flex-col items-center justify-center p-24'>
       <ScaleLoader color='#264653' />
       <motion.h1
         initial={{ x: -1000 }}

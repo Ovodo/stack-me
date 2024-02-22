@@ -27,7 +27,7 @@ const ArticleItem = ({ article }: { article: User }) => {
 
   const age = calculateAge(article.age);
   return (
-    <div className='w-[95%] my-5 relative shadow-sm shadow-appBlue bg-appCream p-5 h-[300px] space-x-10 rounded-sm flex items-center border-black'>
+    <div className='w-[95%] my-5 relative shadow-sm shadow-appBlue bg-appCream bg-opacity-90 p-5 h-[300px] space-x-10 rounded-sm flex items-center border-black'>
       {/* <Link className='cursor-pointer' href={article.url}> */}
       <div className='relative w-[250px] h-[200px]'>
         <Image
